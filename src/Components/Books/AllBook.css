@@ -1,0 +1,41 @@
+.books-container {
+    text-align: center;
+}
+
+.books-container table{
+    border: 1px solid;
+}
+table thead{
+    background: #282a2c;
+    color: white;
+
+}
+ thead th, tr td{
+    padding: 5px;
+    width: 8rem;
+    text-align: center;
+}
+tbody tr:nth-child(odd){
+    background-color: #dbe8f5;
+}
+tbody{
+    max-height:60vh ;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+tbody #modify{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+#modify svg{
+    cursor: pointer;
+}
+@media screen and (max-width:750px) {
+  table{
+    font-size: 12px;
+  }
+  tbody{
+    max-height: 40vh;
+  }
+}
