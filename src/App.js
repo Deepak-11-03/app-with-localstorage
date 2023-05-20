@@ -3,6 +3,8 @@ import "./App.css";
 import AllBook from "./Components/Books/AllBook";
 import AddBook from "./Components/FormComponent/AddBook";
 
+const localBooks = JSON.parse(localStorage.getItem("books"));
+
 function App() {
   const [books, setBooks] = useState([]);
   const [edit, setEdit] = useState(false);
@@ -57,7 +59,6 @@ function App() {
     localStorage.setItem("books", JSON.stringify(deleteBook));
   }
 
-  const localBooks = JSON.parse(localStorage.getItem("books"));
   useEffect(() => {
     if (localBooks) {
       setBooks(localBooks);
